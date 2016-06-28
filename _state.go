@@ -2,7 +2,6 @@ package lua
 
 import (
 	"fmt"
-	"github.com/yuin/gopher-lua/parse"
 	"io"
 	"math"
 	"os"
@@ -10,6 +9,8 @@ import (
 	"strings"
 	"sync/atomic"
 	"time"
+
+	"github.com/yuin/gopher-lua/parse"
 )
 
 const MultRet = -1
@@ -93,6 +94,8 @@ type Options struct {
 	SkipOpenLibs bool
 	// Tells whether a Go stacktrace should be included in a Lua stacktrace when panics occur.
 	IncludeGoStackTrace bool
+	//
+	MaxInst int
 }
 
 /* }}} */

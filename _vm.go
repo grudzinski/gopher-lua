@@ -19,8 +19,8 @@ func mainLoop(L *LState, baseframe *callFrame) {
 		callGFunction(L, false)
 		return
 	}
-
-	for {
+	m := L.Options.MaxInst
+	for i := 0; m == 0 || i < m; i++ {
 		cf = L.currentFrame
 		inst = cf.Fn.Proto.Code[cf.Pc]
 		cf.Pc++
@@ -28,6 +28,7 @@ func mainLoop(L *LState, baseframe *callFrame) {
 			return
 		}
 	}
+	L.RaiseError("Max %d instructions executed", m)
 }
 
 func copyReturnValues(L *LState, regv, start, n, b int) { // +inline-start
