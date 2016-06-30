@@ -67,7 +67,7 @@ Import a package.
 .. code-block:: go
 
    import (
-       "github.com/yuin/gopher-lua"
+       "github.com/grudzinski/gopher-lua"
    )
 
 Run scripts in the VM.
@@ -309,7 +309,7 @@ mymodule.go
     package mymodule
 
     import (
-        "github.com/yuin/gopher-lua"
+        "github.com/grudzinski/gopher-lua"
     )
 
     func Loader(L *lua.LState) int {
@@ -339,7 +339,7 @@ mymain.go
 
     import (
         "./mymodule"
-        "github.com/yuin/gopher-lua"
+        "github.com/grudzinski/gopher-lua"
     )
 
     func main() {

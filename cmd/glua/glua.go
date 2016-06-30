@@ -4,10 +4,11 @@ import (
 	"bufio"
 	"flag"
 	"fmt"
-	"github.com/yuin/gopher-lua"
-	"github.com/yuin/gopher-lua/parse"
 	"os"
 	"runtime/pprof"
+
+	"github.com/grudzinski/gopher-lua"
+	"github.com/grudzinski/gopher-lua/parse"
 )
 
 func main() {

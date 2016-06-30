@@ -5,7 +5,7 @@ import (
 	"strings"
 	"unsafe"
 
-	"github.com/yuin/gopher-lua/pm"
+	"github.com/grudzinski/gopher-lua/pm"
 )
 
 func OpenString(L *LState) int {
