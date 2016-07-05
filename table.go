@@ -28,6 +28,10 @@ func (lv lValueArraySorter) Less(i, j int) bool {
 	return lessThan(lv.L, lv.Values[i], lv.Values[j])
 }
 
+func NewTable(acap int, hcap int) *LTable {
+	return NewTable(acap, hcap)
+}
+
 func newLTable(acap int, hcap int) *LTable {
 	if acap < 0 {
 		acap = 0
